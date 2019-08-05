@@ -1,0 +1,32 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
+  />
+</head>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">DisplayName</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><%= user.id %></th>
+        <td><%= user.username %></td>
+        <td><%= user.displayName %></td>
+        <td>
+          <% if (user.emails) { %> Email: <%= user.emails[0].value %><br />
+          <% } %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
